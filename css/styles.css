@@ -76,7 +76,7 @@ section {
 }
 
 .navbar__menu .menu__link {
-  display: inline.block;
+  display: inline-block;
   padding: 1em;
   font-weight: bold;
   text-decoration: none;
@@ -89,6 +89,13 @@ section {
   transition: ease 0.3s all;
 }
 
+@media only screen and (max-width: 600px) {
+  #navbar__list {
+    display: block;
+    font-size: 12px;
+    float: left;
+  }
+}
 /* Header Styles */
 .page__header {
   background: #fff;
