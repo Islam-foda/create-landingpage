@@ -41,6 +41,40 @@ navList.appendChild(appendFragment);
  * Start Helper Functions
  *
 */
+// const first = document.getElementById('section1');
+// const bound = first.getBoundingClientRect();
+// if (
+//     bound.top >= 0 &&  bound.bottom <= window.innerHeight
+// ) {
+    
+//     console.log('In the viewport!');
+//  }
+ 
+window.addEventListener("scroll",function(){
+    
+    grapAllSections.forEach(function(selection){
+        const bound = selection.getBoundingClientRect();
+       
+    if (bound.top >= -5 &&  bound.bottom <= window.innerHeight){
+        selection.classList.add("your-active-class")
+    }else {selection.classList.remove("your-active-class")}; })
+})
+
+
+
+
+
+    // grapAllSections.forEach(function(selection){
+    //     const bound = selection.getBoundingClientRect()
+    //     window.addEventListener("scrol", function(){
+    //     if (bound.top >= 0 && bound.bottom <= window.innerHeight) {
+          
+    //      
+    //      console.log('In the viewport!');
+    //         }else {
+    //         selection.classList.remove("your-active-class")
+    //     }})})
+
 
 
 
