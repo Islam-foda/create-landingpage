@@ -17,34 +17,30 @@
  * Define Global Variables
  *
 */
-const grapAllSections = document.querySelectorAll('section');//take all sections to a nodelist(array).
-const navList = document.getElementById('navbar__list');//select the ul.
+const grapAllSections = document.querySelectorAll('section');//grab all sections to a nodelist.
+const navList = document.getElementById('navbar__list');//select Nav ul.
 const appendFragment = document.createDocumentFragment();//fragment to append the li.
 
 //build lists for each section
 grapAllSections.forEach(function(elemnt, index){
     let li= document.createElement("li");
-    let getDataNav = elemnt.getAttribute("data-nav")
-    li.setAttribute("class","menu__link")
-    //li.style.color = "red";
+    let getDataNav = elemnt.getAttribute("data-nav");
+    li.setAttribute("class","menu__link");
     li.innerText = getDataNav;
     appendFragment.appendChild(li);
+    //adding Event on click to scroll into desired section when preesing on the nav item.
     li.addEventListener("click", function(){
         elemnt.scrollIntoView({behavior: "smooth"});
     })
 });
-
 navList.appendChild(appendFragment);
 
-/**
- * End Global Variables
- * Start Helper Functions
- *
-*/
 
- 
+
+ //adding Event for the section in the view, to get a selction class
 window.addEventListener("scroll",function(){
-    
+    //select the desired section by getboundigclientrect function
+    //and make a forEach loop to append the desired class for each section
     grapAllSections.forEach(function(selection){
         const bound = selection.getBoundingClientRect();
        
@@ -54,20 +50,6 @@ window.addEventListener("scroll",function(){
     }else {selection.classList.remove("your-active-class")}; })
 })
 
-
-
-
-
-    // grapAllSections.forEach(function(selection){
-    //     const bound = selection.getBoundingClientRect()
-    //     window.addEventListener("scrol", function(){
-    //     if (bound.top >= 0 && bound.bottom <= window.innerHeight) {
-          
-    //      
-    //      console.log('In the viewport!');
-    //         }else {
-    //         selection.classList.remove("your-active-class")
-    //     }})})
 
 
 
