@@ -46,7 +46,7 @@ window.addEventListener("scroll",function(){
        
     if (bound.top >= -70 &&  bound.top <= 300){
         selection.classList.add("your-active-class");
-        console.log("Section in the view")
+        //console.log("Section in the view")
     }else {selection.classList.remove("your-active-class")}; })
 })
 
