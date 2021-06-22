@@ -48,7 +48,7 @@ window.addEventListener("scroll",function(){
     grapAllSections.forEach(function(selection){
         const bound = selection.getBoundingClientRect();
        
-    if (bound.top >= -5 &&  bound.bottom <= window.innerHeight){
+    if (bound.top >= -70 &&  bound.top <= 300){
         selection.classList.add("your-active-class");
         console.log("Section in the view")
     }else {selection.classList.remove("your-active-class")}; })
