@@ -41,14 +41,7 @@ navList.appendChild(appendFragment);
  * Start Helper Functions
  *
 */
-// const first = document.getElementById('section1');
-// const bound = first.getBoundingClientRect();
-// if (
-//     bound.top >= 0 &&  bound.bottom <= window.innerHeight
-// ) {
-    
-//     console.log('In the viewport!');
-//  }
+
  
 window.addEventListener("scroll",function(){
     
@@ -56,7 +49,8 @@ window.addEventListener("scroll",function(){
         const bound = selection.getBoundingClientRect();
        
     if (bound.top >= -5 &&  bound.bottom <= window.innerHeight){
-        selection.classList.add("your-active-class")
+        selection.classList.add("your-active-class");
+        console.log("Section in the view")
     }else {selection.classList.remove("your-active-class")}; })
 })
 
