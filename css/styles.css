@@ -93,8 +93,8 @@ section {
   #navbar__list li {
     /* font-size: 12px; */
     display: inline-block;
-    padding: 5px;
-    /*margin: 10px; */
+    /*padding: 5px;*/
+    margin: 10px; 
     }
 }
 /* Header Styles */
